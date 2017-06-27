@@ -3,6 +3,7 @@ package tsu.lhs.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class JdbcConnection { 
 	 static {
@@ -23,6 +24,17 @@ public class JdbcConnection {
 			e.printStackTrace();
 		}
 		 return conn;
+		 
+	 }
+	 public static void close(Connection conn,Statement sts) throws SQLException{
+		 if(sts!=null){
+			 sts.close();
+			 
+		 }
+		 if(conn!=null){
+			 conn.close();
+		 }
+		 
 		 
 	 }
 	

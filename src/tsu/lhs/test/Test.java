@@ -8,9 +8,11 @@ public class Test {
 
 	public static void main(String[] args) throws SQLException {
      userDao user=new userDao();
-     user.selectuser();
+/*     user.selectuser();
  //  user.installuser();
-     user.updatauser();
+     user.updatauser();*/
+    // user.insertuser();
+     user.cursorselect();
 	}
 
 }
